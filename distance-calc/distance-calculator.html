@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Distance calculator</title>
+    <style type="text/css">
+        .answer {
+            margin: 20px;
+            padding: 5px;
+            color: cornflowerblue;
+            font-size: large;
+        }
+
+        form {
+            margin-left: 20px;
+            width: 200px;
+            /* To see the outline of the form */
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+        }
+    </style>
+    <script type="text/javascript">
+        function IsValid() {
+            var MyForm = document.forms["input_form"];
+            var From = MyForm['from'].value;
+            var To = MyForm['to'].value;
+            if (From === null || To === null || From === "" || To === "") {
+                document.getElementById("error").hidden = "false";
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Distance Calculator</h1>
+    <form name="input_form" method="post" onsubmit="return IsValid()">
+        <p>Select the city #1: </p>
+        <input type="text" name="from" value="{{ form_from }}"/>
+
+        <p>Select the city #2: </p>
+        <input type="text" name="to" value="{{ form_to }}"/>
+
+        <br><br><br>
+        <button type="submit">Calculate distance</button>
+        <div hidden="true" id="error"><b>Both Input fields must have text in them. </b></div>
+    </form>
+    {% if ans %}
+    <div>
+        <p class="answer">The distance from {{ form_from }} to {{ form_to }} is <b>{{ ans }} miles</b></p>
+    </div>
+    {% endif %}
+
+</body>
+</html>
