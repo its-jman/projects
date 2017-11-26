@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Josh Manning - Blog</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/location.js') }}"></script>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab">
+</head>
+<body>
+    <div class="header">
+        <div class="title_header">
+            <a href="{{ url_for("index") }}" class="title_link">
+                <span class="title">import this</span>
+            </a>
+        </div>
+        <div class="separator"></div>
+    </div>
+
+    <div class="content">
+        <div class="popup">
+            <div class="popup-inner" id="mapholder">
+                <img src="{{ url_for('static', filename='img/favicon.ico') }}" id="map" alt="Your location">
+            </div>
+        </div>
+        {% block content %}
+            <p>Default</p>
+        {% endblock content %}
+    </div>
+
+    <div class="bottom-left-corner">
+        <div class="location">
+            <span onclick="getLocation()" id="get-location">Get your location</span>
+        </div>
+
+        <div class="push_time">
+            Time of last push:
+            <br>
+            {% if time %}
+                {{ time }}
+            {% else %}
+                Missing time variable in template.
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

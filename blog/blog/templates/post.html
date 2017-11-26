@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="post_header">
+        <h2 id="post_title">{{ page.title }}</h2>
+        <div class="author_date">
+            <span id="post_author">By {{ page.author }}</span>
+            <span id="post_date">{{ page.date }}</span>
+        </div>
+    </div>
+    <div id="post">
+        {{ page.html|safe }}
+    </div>
+{% endblock content %}
