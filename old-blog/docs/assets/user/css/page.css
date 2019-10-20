@@ -1,0 +1,65 @@
+html {
+       overflow-y: scroll;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.header {
+    margin: 0 auto;
+    width: 900px;
+    text-align: center;
+}
+
+.title_header {
+    font-family: 'Josefin Slab', serif;
+    font-size: 40px;
+    margin: 25px;
+    padding-bottom: 5px;
+}
+
+.title_link:link {
+    text-decoration: none;
+    color: #5067af;
+}
+
+.title_link:visited {
+    text-decoration: none;
+    color: #5067af;
+}
+
+.separator {
+    border-bottom: 3px #eeeeee solid;
+}
+
+.content {
+    margin: 0 auto;
+    width: 825px;
+}
+
+.author_date {
+    font-family: 'Open sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.post_date {
+    margin-left: 9px;
+    color: #979797;
+}
+
+.post {
+    width: 775px;
+    margin: 0 auto;
+    line-height: 35px;
+    font-family: 'Open sans', serif;
+    font-size: 19px;
+    text-align: justify;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}

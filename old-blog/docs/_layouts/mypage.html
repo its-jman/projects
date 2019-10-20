@@ -1,0 +1,23 @@
+---
+layout: base
+---
+<div class="post_header">
+    <h2 class="post_title">{{ page.title }}</h2>
+    <div class="author_date">
+        {% if page.author %}<div class="post_author">By: {{ page.author }}</div>{% endif %}
+        {% if page.date %}<div class="post_date">Posted: {% if page.time %}{{ page.time }}{% endif %}</div>
+        <div class="post_date">{{ page.date | date_to_long_string }}</div>{% endif %}
+    </div>
+</div>
+<article class="post">
+    {{ content }}
+</article>
+{% if page.edits %}
+<section class="edits">
+  {% for edit in page.edits %}
+    {% if edit.date %}<div class="post_date">Edited: {% if edit.time %}{{ edit.time }}{% endif %}</div>
+    <div class="post_date">{{ edit.date | date_to_long_string }}</div>{% endif %}
+    {% if edit.details %}<div class="post_date">{{ edit.details }}</div>{% endif %}
+  {% endfor %}
+</section>
+{% endif %}
