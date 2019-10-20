@@ -1,0 +1,10 @@
+{{ service }}:
+  package:
+    include:
+      - bin/{{ fullPath }}
+
+  handler: bin/{{ fullPath }}
+  events:
+    - http:
+        path: /{{ service }}
+        method: {{ method }}
