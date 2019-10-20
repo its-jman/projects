@@ -1,0 +1,28 @@
+safe: true
+
+name: "import this"
+
+# Overridden by GitHub Pages, but still used when developing locally.
+# source: "docs"
+
+collections:
+  # Overridden functionality for posts. DO NOT require date.
+  mypages:
+    output: true
+    permalink: "/pages/:slug"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "mypages"
+    values:
+      layout: "mypage"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-mentions
+
+exclude:
+  - CNAME
