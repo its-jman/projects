@@ -1,0 +1,44 @@
+service: auth-api-oauth2
+
+provider:
+  name: aws
+  runtime: go1.x
+
+  region: us-east-1
+  memorySize: 128
+  timeout: 6
+
+  stage: ${opt:stage, 'dev'}
+  environment:
+    STAGE: ${self:provider.stage}
+    TABLE_NAME: ${self:custom.tableName}
+
+    SSM_PRIVATE_KEY_NAME: auth-jwt-${self:provider.stage}-private.pem
+    SSM_PUBLIC_KEY_NAME: auth-jwt-${self:provider.stage}-public.pem
+
+
+custom:
+  tableName: auth-${self:provider.stage}
+
+package:
+  individually: true
+  include:
+    - "!**"
+
+functions:
+  - ${file(./cmd/authorization-POST/definition.yml)}
+
+  #    iamRoleStatements:
+  #      - Effect: Allow
+  #        Action:
+  #          - dynamodb:DescribeTable
+  #          - dynamodb:Query
+  #          - dynamodb:Scan
+  #          - dynamodb:GetItem
+  #          - dynamodb:PutItem
+  #          - dynamodb:UpdateItem
+  #          - dynamodb:DeleteItem
+  #        # Get the ARN of the named key `AuthTable`
+  #        # from dynamodb-table.yml
+  #        Resource:
+  #          - "Fn::GetAtt": [ authTable, Arn ]

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "sourceMap": true,
+    "outDir": "bin",
+    "watch": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service",
+        "configFile": "./tslint.json",
+      }
+    ]
+  },
+  "include": [
+    "src/ts/*"
+  ],
+  "exclude": [
+    "node_modules/",
+    "bin/"
+  ]
+}
