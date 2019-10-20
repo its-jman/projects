@@ -1,0 +1,16 @@
+.idea/
+.serverless/
+node_modules/
+bin/
+
+*.map
+*.sh
+*.yml
+*.go
+*.template
+*.sum
+*.mod
+
+yarn.lock
+.gitignore
+.prettierignore

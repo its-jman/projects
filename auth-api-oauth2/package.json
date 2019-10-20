@@ -1,0 +1,21 @@
+{
+  "name": "auth-api-oauth2",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "rm -rf bin/",
+    "build": "node scripts/go-build.js",
+    "deploy": "yarn clean && yarn build && sls deploy",
+    "add-endpoint": "node scripts/add-endpoint.js"
+  },
+  "devDependencies": {
+    "command-line-args": "^5.0.2",
+    "prettier": "^1.15.3",
+    "replace": "^1.0.0",
+    "serverless": "^1.34.1",
+    "template-file": "^3.0.1"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 100
+  }
+}

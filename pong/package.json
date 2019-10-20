@@ -1,0 +1,27 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc",
+    "lint": "tslint -p . -c tslint.json",
+    "serve": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmmhk/pong.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jbmmhk/pong/issues"
+  },
+  "homepage": "https://github.com/jbmmhk/pong#readme",
+  "devDependencies": {
+    "serve": "^6.5.2",
+    "tslint": "^5.9.1",
+    "tslint-language-service": "^0.9.8",
+    "typescript": "^2.7.2"
+  }
+}

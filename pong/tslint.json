@@ -1,0 +1,72 @@
+{
+    "defaultSeverity": "warn",
+    "extends": [
+        "tslint:all"
+    ],
+    "rules": {
+        "quotemark": {
+            "options": "single"
+        },
+        "variable-name": {
+            "options": [
+                "allow-leading-underscore",
+                "ban-keywords"
+            ]
+        },
+        "member-ordering": {
+            "options": {
+                "order": [
+                    {
+                        "name": "vars",
+                        "kinds": [
+                            "private-static-field",
+                            "private-instance-field",
+                            "protected-instance-field",
+                            "protected-static-field",
+                            "public-instance-field",
+                            "public-static-field"
+                        ]
+                    }
+                ]
+            }
+        },
+        "no-angle-bracket-type-assertion": true,
+        "comment-format": {
+            "options": "check-space"
+        },
+        "member-access": false,
+        "typedef": {
+            "options": [
+                "array-destructuring",
+                "call-signature",
+                "member-variable-declaration",
+                "object-destructuring",
+                "parameter",
+                "property-declaration"
+            ]
+        },
+        "object-literal-key-quotes": {
+            "options": "always"
+        },
+        "object-literal-sort-keys": false,
+        "trailing-comma": false,
+        "no-magic-numbers": false,
+        "semicolon": true,
+        "no-console": false,
+        "newline-per-chained-call": false,
+        "ordered-imports": false,
+        "max-classes-per-file": {
+            "options": 4
+        },
+        "one-line": {
+            "options": [
+                "check-catch",
+                "check-finally",
+                "check-open-brace",
+                "check-whitespace"
+            ]
+        },
+        "only-arrow-functions": false,
+        "completed-docs": false
+    }
+}

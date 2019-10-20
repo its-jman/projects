@@ -1,0 +1,10 @@
+authorization:
+  package:
+    include:
+      - bin/authorization-POST
+
+  handler: bin/authorization-POST
+  events:
+    - http:
+        path: /authorization
+        method: POST

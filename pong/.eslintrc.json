@@ -1,0 +1,108 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:all",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            4
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "no-unused-vars": "off",
+        "no-console": "off",
+        "no-debugger": "off",
+        "space-before-function-paren": "off",
+        "padded-blocks": "off",
+        "id-length": "off",
+        "no-underscore-dangle": "off",
+        "no-undefined": "off",
+        "no-magic-numbers": [
+            "warn",
+            {
+                "ignore": [-1, 0, 0.5, 1, 2, 1000]
+            }
+        ],
+        "capitalized-comments": "off",
+        "class-methods-use-this": "off",
+        "no-trailing-spaces": "off",
+        "no-extra-parens": "off",
+        "no-param-reassign": "warn",
+        "lines-around-comment": "off",
+        "sort-imports": "off",
+        "max-statements": "off",
+        "complexity": "warn",
+        "max-depth": "warn",
+        "brace-style": [
+            "warn",
+            "stroustrup",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 120
+            }
+        ],
+        "space-infix-ops": "off",
+        "multiline-comment-style": "off",
+        "eol-last": "warn",
+        "one-var": "off",
+        "spaced-comment": "warn",
+        "no-warning-comments": "off",
+        "func-style": [
+            "warn",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "max-statements-per-line": [
+            "warn",
+            {
+                "max": 3
+            }
+        ],
+        "function-paren-newline": "off",
+        "require-jsdoc": [
+            "warn",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": true
+                }
+            }
+        ],
+        "valid-jsdoc": [
+            "warn",
+            {
+                "requireReturn": false,
+                "matchDescription": ".+"
+            }
+        ],
+        "no-ternary": "off",
+        "multiline-ternary": "off",
+        "max-params": "off",
+        "line-comment-position": "off",
+        "no-inline-comments": "off",
+        "sort-keys": "off",
+        "object-curly-newline": "off",
+        "object-shorthand": "off",
+        "no-else-return": "off",
+        "no-implicit-coercion": "off"
+    }
+}
